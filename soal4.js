@@ -1,14 +1,13 @@
 countVowels=(frase)=>{
-    let word = frase.split('')
     let vowels = 'aiueoAIUEO'
-    let b = 0
-    for (let i = 0; i < word.length; i++) {
-       let a = vowels.includes(word[i])
+    let count = 0
+    for (let i = 0; i < frase.length; i++) {
+       let a = vowels.includes(frase[i])
        if (a == 1) {
-           b = b + a
+           count = count + a
        } 
     }
-    return b
+    return count
 }
 console.log(countVowels('programmer'))
 console.log(countVowels('hmm...'))
